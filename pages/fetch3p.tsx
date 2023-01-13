@@ -1,5 +1,6 @@
 import { count } from "console";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 
 const User = () => {
     type User = {
@@ -37,14 +38,18 @@ const User = () => {
         // const [name] = [item.name];
         // console.log(name);
         // console.log(name.title);
-
+// console.log(picture);
 
 
         // console.log({name,location,picture});
         return (
             <div>
-                {name.title} {name.first} {name.last} 
-                
+                <h1>{name.title} {name.first} {name.last} </h1>
+                {location.city} : {location.country}
+                <div>
+                <Image src={picture.large} width="100" height="100" alt={""}/>
+                {/* <Image src={picture.large} width="100" height="100" alt={""}/> */}
+                </div>
             </div>
 
         )
